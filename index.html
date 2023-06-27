@@ -52,9 +52,6 @@
             <h1 class="logo me-auto">
                 <a href=""><img src="assets/img/logo.jpg" alt="Parque Industrial" id="logo"></a>
             </h1>
-            <!-- <h1 class="logo me-auto"><a href="<?php echo(base_url());  ?>/">Parque Industrial<span>.</span></a></h1> -->
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
@@ -281,16 +278,20 @@ deportes@tresarroyos.gov.ar.
                     <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                         <div class="row">
                             <div class="col form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre y Apellido:" required>
+                                <label>Nombre y Apellido:</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre y apellido" required>
                             </div>
                         </div>
                         <div class="col form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Mail" required>
+                            <label>Email:</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Mail@example.com" required>
                         </div>
                         <div class="form-group">
+                            <label>Asunto</label>
                             <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
                         </div>
                         <div class="form-group">
+                            <label>Mensaje:</label>
                             <textarea class="form-control" name="message" rows="5" placeholder="Mensaje que quieras dejarnos" required></textarea>
                         </div>
                         <div class="my-3">
