@@ -145,11 +145,14 @@
             <div class="section-title">
                 <h2>Noticias</h2>
             </div>
-            <form id="botonFiltro" class="d-flex" role="search">
-                <input type="text" class="form-control" placeholder="Buscar noticia">
-                <button class="btn btn-primary" type="submit">Buscar</button>
-            </form>
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                 <form id="botonFiltro" class="d-flex" role="search">
+                     <input type="text"  id ="buscador-noticias"class="form-control" placeholder="Buscar noticia">
+                     <button class="btn btn-primary" type="">Buscar</button>
+                     <ul id="contenedor-noticia"></ul>
+                 </form>
+                 </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="testimonial-wrap">
@@ -346,6 +349,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js "></script>
+    <script src="app.js"></script>
 
 
 
