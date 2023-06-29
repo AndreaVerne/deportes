@@ -28,17 +28,31 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
+        .blog .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
         }
         
-        td,
-        th {
-            text-align: center;
-            border: 1px solid #dddddd;
-            padding: 8px;
+        .blog .card {
+            height: 100%;
+        }
+        
+        .blog .col {
+            width: calc(25% - 10px);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .blog .col {
+                width: calc(33.33% - 10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog .col {
+                width: calc(50% - 10px);
+            }
         }
     </style>
 </head>
@@ -59,7 +73,6 @@
                     <li><a class="nav-link scrollto" href="editar.html">Edicion</a></li>
                     <li><a class="nav-link scrollto" href="index.html#beneficios">Noticias</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
-                    <!-- <li><a href="<?php echo(base_url());  ?>/mapa">Mapa</a></li> -->
                     <li><a class="nav-link scrollto" href="index.html#contacto">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -108,7 +121,10 @@
                     <div class="row row-cols-1 row-cols-md-4 g-4">
                         <div class="col">
                             <div class="card">
-                                <img src="assets/img/evento1.jpg" class="card-img-top" alt="...">
+                                <div class="img">
+                                    <img src="assets/img/evento1.jpg" class="card-img-top" alt="...">
+                                </div>
+
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="evento.html" style="color: black">En verano siguen los deportes</a></h5>
                                     <p class="card-text"></p>
@@ -149,14 +165,34 @@
 
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="assets/img/evento3.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Triatlon short Claromeco</h5>
+                                    <p class="card-text"></p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="assets/img/evento4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Colonia de verano para adultos</h5>
+                                    <p class="card-text"></p>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
 
                     <div class="blog-pagination">
                         <ul class="justify-content-center">
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
                         </ul>
                     </div>
 
@@ -174,15 +210,6 @@
     <footer id="footer">
 
         <div class="container d-md-flex py-4">
-
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-            </div>
             <div class="social-links text-center text-md-end pt-3 pt-md-0">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
