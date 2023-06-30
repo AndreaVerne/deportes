@@ -9,7 +9,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+  
 #botonFiltro {
     float: right;
     font-family: "Open Sans", sans-serif;
@@ -1334,8 +1334,7 @@ section {
 
 .contact .php-email-form .error-message {
     display: none;
-    color: rgba(38, 25, 221, 0.301);
-    background: #295adf;
+    color: black;
     text-align: left;
     padding: 15px;
     font-weight: 600;
@@ -1347,8 +1346,8 @@ section {
 
 .contact .php-email-form .sent-message {
     display: none;
-    color: #fff;
-    background: #295adf;
+    color: black;
+    
     text-align: center;
     padding: 15px;
     font-weight: 600;

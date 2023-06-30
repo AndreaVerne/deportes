@@ -75,8 +75,16 @@
                 max-width: 7rem !important;
             }
             
-            td {
+            .table-secondary {
                 text-align: left;
+                align-items: center;
+            }
+            .nav-item{
+                border-radius: 10px;
+            }
+            .add{
+                max-width: 130px;
+                margin-bottom: 10px;
             }
         </style>
     </header>
@@ -84,13 +92,13 @@
     <section id="datos" class="datos">
         <div class="container" data-aos="fade-up">
             <ul class="nav nav-datos row d-flex">
-                <li class="nav-item col-3">
+                <li class="nav-item rounded col-3">
                     <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
                         <i class="bi bi-newspaper"></i>
                         <h4 class="d-none d-lg-block">Noticias</h4>
                     </a>
                 </li>
-                <li class="nav-item col-3">
+                <li class="nav-item rounded col-3">
                     <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                         <i class="bi bi-calendar3"></i>
                         <h4 class="d-none d-lg-block">Eventos</h4>
@@ -102,7 +110,11 @@
                 <div class="tab-pane active show" id="tab-1">
                     <div class="row">
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                            <button class="btn btn-success"><a href="nuevaNoticia.html" ><i class="bi bi-plus-square-fill fs-1"></i></a></button>
+                            <a href="nuevaNoticia.html" class="btn btn-success d-flex align-items-center justify-content-center add">
+                                <i class="bi bi-plus-square-fill fs-1 me-2"></i>
+                                <span class="d-inline-block">Agregar</span>
+                              </a>
+                              
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -150,7 +162,10 @@
                 <div class="tab-pane" id="tab-2">
                     <div class="row">
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <button class="btn btn-success"><a href="nuevoEvento.html" ><i class="bi bi-plus-square-fill fs-1"></i></a></button>
+                            <a href="nuevaNoticia.html" class="btn btn-success d-flex align-items-center justify-content-center add">
+                                <i class="bi bi-plus-square-fill fs-1 me-2"></i>
+                                <span class="d-inline-block">Agregar</span>
+                              </a>
                             <table class="table">
                                 <thead>
                                     <tr>
