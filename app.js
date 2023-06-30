@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const titulo = element.querySelector('h3').textContent.toLowerCase();
         if (titulo.includes(filtro)) {
           element.style.display = 'block';
+          
         } else {
           element.style.display = 'none';
         }
