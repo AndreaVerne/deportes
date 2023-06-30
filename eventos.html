@@ -58,10 +58,19 @@
    
     .card-img-top {
         object-fit: cover;
-        height: 200px; /* Elige la altura deseada para las imágenes */
+        height: 200px; 
         width: 100%; /* Ajusta el ancho al 100% para que las imágenes ocupen todo el espacio disponible */
     }
 
+    .card {
+        box-shadow: 10px 10px 5px 0px rgba(37, 36, 36, 0.75);
+        transition: transform 0.1s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover {
+        transform: rotateX(-20deg) rotateY(20deg);
+    }
 
     </style>
 </head>
@@ -197,6 +206,38 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+    
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', rotateCard);
+        card.addEventListener('mouseout', resetCard);
+    });
+
+    function rotateCard(event) {
+        const card = this;
+        const cardRect = card.getBoundingClientRect();
+
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const cardCenterY = cardRect.top + cardRect.height / 2;
+
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        const rotateX = (mouseY - cardCenterY) / 10;
+        const rotateY = (cardCenterX - mouseX) / 10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    }
+
+    function resetCard() {
+        this.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    }
+</script>
+
+    
 
 </body>
 
